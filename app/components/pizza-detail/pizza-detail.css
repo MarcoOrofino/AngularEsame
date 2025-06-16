@@ -1,0 +1,27 @@
+.container {
+  max-width: 480px;
+  margin: 2rem auto;
+  padding: 1rem;
+  color: #eee;
+  text-align: center;
+}
+
+h1 {
+  color: #e63946;
+  margin-bottom: 1rem;
+}
+
+img {
+  width: 100%;
+  margin-bottom: 1rem;
+  border-radius: 4px;
+}
+
+p {
+  margin: 0.5rem 0;
+  color: black;
+}
+
+strong {
+  color: #f4a261;
+}
