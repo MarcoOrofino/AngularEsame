@@ -1,0 +1,44 @@
+{
+	"cards": [{
+			"id": 1,
+			"name": "Margherita",
+			"price": 8.99,
+			"image": "./assets/margherita.png",
+			"quantity": 0,
+			"description": "Tra le pizze, la pizza margherita è quella più semplice e più amata; una fragrante pizza fatta in casa con pomodoro, mozzarella, olio e basilico."
+		},
+		{
+			"id": 2,
+			"name": "Diavola",
+			"price": 9.99,
+			"image": "./assets/diavola.png",
+			"quantity": 0,
+			"description": "Tra le pizze, la pizza Diavola è quella più semplice e più amata; una fragrante pizza fatta in casa con pomodoro, mozzarella, olio e basilico."
+		},
+		{
+			"id": 3,
+			"name": "Marinara",
+			"price": 7.99,
+			"image": "./assets/marinara.png",
+			"quantity": 0,
+			"description": "Tra le pizze, la pizza Marinara è quella più semplice e più amata; una fragrante pizza fatta in casa con pomodoro, mozzarella, olio e basilico."
+		},
+		{
+			"id": 4,
+			"name": "Bottarga",
+			"price": 10.99,
+			"image": "./assets/bottarga.png",
+			"quantity": 0,
+			"description": "Tra le pizze, la pizza Bottarga è quella più semplice e più amata; una fragrante pizza fatta in casa con pomodoro, mozzarella, olio e basilico."
+		},
+		{
+			"id": 5,
+			"name": "Frutti di mare",
+			"price": 11.99,
+			"image": "./assets/mare.png",
+			"quantity": 0,
+			"description": "Tra le pizze, la pizza Frutti di mare è quella più semplice e più amata; una fragrante pizza fatta in casa con pomodoro, mozzarella, olio e basilico."
+		}
+	]
+
+}

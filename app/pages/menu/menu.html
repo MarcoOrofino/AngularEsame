@@ -1,0 +1,39 @@
+<div class="container mt-4">
+  <div class="mb-4 text-center">
+    <h1>Scegli la pizza che desideri ordinare</h1>
+  </div>
+
+  <hr>
+
+  <div class="mb-4 text-center">
+    <h1>Carrello</h1>
+    <button class="btn btn-primary" (click)="openCart()">Carrello</button>
+  </div>
+  <app-cart *ngIf="showCart" (closeCart)="closeCart()" (confirmBuy)="confermaAcquisto()"></app-cart>
+
+  <hr>
+
+  <div class="container">
+    <div class="row">
+      <ng-container *ngFor="let pizza of pizze">
+        <div class="col-md-3 mb-3" *ngIf="!pizza.hidden">
+          <div class="card h-100 text-center shadow">
+            <a [routerLink]="['/pizza-detail', pizza.id]" class="text-decoration-none text-dark">
+              <img [src]="pizza.image" class="card-img-top" alt="Immagine di {{ pizza.name }}" />
+            </a>
+            <div class="card-body">
+              <h5 class="card-title">{{ pizza.name }}</h5>
+              <p class="card-text">{{ pizza.price | currency:'EUR' }}</p>
+              <div class="d-flex align-items-center justify-content-center gap-5">
+                <button class="btn btn-danger" (click)="decreaseQuantity(pizza)">−</button>
+                <span>{{ pizza.quantity }}</span>
+                <button class="btn btn-success" (click)="increaseQuantity(pizza)">+</button>
+              </div>
+              <button class="btn btn-outline-danger" (click)="eliminaPizza(pizza)">Elimina</button>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</div>
