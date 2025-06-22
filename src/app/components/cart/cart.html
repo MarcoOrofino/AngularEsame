@@ -1,0 +1,50 @@
+<div class="modal d-block" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h2 class="modal-title">Carrello</h2>
+      </div>
+
+      <hr class="m-0" />
+
+      <div *ngIf="cartItems$ | async as cartItems" class="modal-body">
+
+        <div *ngIf="cartItems.length === 0">
+          Il Carrello è Vuoto.
+        </div>
+
+        <ul class="list-group" *ngIf="cartItems.length > 0">
+          <li *ngFor="let pizza of (cartItems$ | async)" class="list-group-item d-flex align-items-center">
+
+            <img [src]="pizza.image" alt="{{pizza.name}}">
+
+            <div>
+              <strong>{{ pizza.name }}</strong>
+
+              qt: 
+              <span class="mx-2">{{ pizza.quantity }}</span>
+
+              &nbsp; * {{ pizza.price | currency:'EUR':'symbol':'1.2-2' }} = 
+              <strong>{{ (pizza.price * pizza.quantity) | currency:'EUR':'symbol':'1.2-2' }}</strong>
+            </div>
+
+          </li>
+        </ul>
+
+        <div class="total mt-3">
+            <h5>Totale: {{ getTotal(cartItems) | currency:'EUR' }}</h5>
+        </div>
+
+      </div>
+
+      <hr class="m-0" />
+
+      <div class="modal-footer">
+        <button class="btn btn-danger" (click)="chiudi()">Close</button>
+        <button class="btn btn-success" (click)="buy()">Buy</button>
+      </div>
+    </div>
+  </div>
+</div>
+
